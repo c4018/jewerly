@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nanum+Myeongjo&family=Noto+Sans:wght@200&display=swap');
+*{
+   background-color: #fff;
+   margin: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+}
+body.open::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.container{
+    display: block;
+    margin: auto;
+    width: 1440px;
+    height: 100vh;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.2);
+   
+}
+.container.open{
+    margin-left: 300px;
+    width: calc(100vw - 300px);
+  
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    /* background-color: aqua; */
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+aside{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    background-color:  #fff;
+    transform: translateX(-300px);
+    transition: all 0.3s ease;
+    font-size: 28px;
+    z-index: 6;
+    /* background-color: pink; */
+}
+
+
+aside.open{
+    transform: translateX(0);
+
+}
+aside img.close{
+    margin-bottom: 120px;
+
+}
+
+
+
+aside a{
+  text-decoration: none;
+  color: #2b2b2b;
+  margin-bottom: 48px;
+  display: inline-block;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  line-height: 3px;
+  /* background-color: aqua; */
+  
+}
+aside a:after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 0px;
+        height: 1.8px;
+        margin: 1px 0 0;
+        transition: all 0.2s ease-in-out;
+        transition-duration: 0.3s;
+        opacity: 0;
+        background-color: #222222;
+      }
+
+aside a:hover:after{
+    width: 100%;
+    opacity: 1;
+  }
+
+     
+
+.items{
+    width: 1440px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:150px 70% 20px;
+    gap: 10px;
+    /* background-color: aquamarine; */
+
+}
+
+.items #name{
+    color: #fff;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform:translate(50%, -50%); 
+    background-color: transparent;
+    font-size: 32px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+
+.item1{
+    border-left: 1px solid #D2D2D2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(img/1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    /* background-color: aqua; */
+
+    margin: 0px 0px;
+    overflow: hidden;
+    background-size: 100%;
+  
+}
+
+.item1:hover {
+    background-size: 120%;
+    transition:linear 0.3s;
+  
+}
+
+
+.item2{
+    border-left: 1px solid #D2D2D2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: aquamarine; */
+    background-image: url(img/2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    background-size: 100%;
+    
+}
+.item2:hover {
+    background-size: 120%;
+    transition:linear 0.3s;
+  
+}
+
+.item3{
+    border-left: 1px solid #D2D2D2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(img/3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    background-size: 100%;
+}
+.item3:hover {
+    background-size: 120%;
+    transition:linear 0.3s;
+  
+}
+.item4{
+    border-left: 1px solid #D2D2D2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url(img/4.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    background-size: 100%;
+}
+.item4:hover {
+    background-size: 120%;
+    transition:linear 0.3s;
+  
+}
+
